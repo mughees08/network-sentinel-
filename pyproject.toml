@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "network-sentinel"
+version = "1.0.0"
+description = "Offline PCAP analysis and explainable network threat-hunting heuristics"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["scapy>=2.5.0,<3.0.0"]
+license = {text = "MIT"}
+authors = [{name = "Project Author"}]
+
+[project.scripts]
+network-sentinel = "network_sentinel.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["network_sentinel*"]
